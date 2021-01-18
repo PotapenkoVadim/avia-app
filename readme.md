@@ -22,3 +22,5 @@
   npm run start
 
 ### Дополнительно
+Подробнее приложение можно посмотреть [тут](https://potapenkovadim.github.io/avia-app/dist/index.html).
+Собранный проект в директории dist/.
