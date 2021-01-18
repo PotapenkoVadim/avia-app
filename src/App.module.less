@@ -1,0 +1,45 @@
+.container {
+  margin: 1rem 10%;
+  text-align: center;
+  padding: 1rem 0;
+  .app-display { display: flex; }
+  .logo {
+    font-size: 20px;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+  }
+
+  .list-container {
+    width: 80%;
+    margin: 0;
+  }
+}
+
+// 320
+// 768
+// 1024
+@media (max-width: 1024px) {
+  .container { margin: 1rem 0; }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: .5rem;
+    .app-display { flex-direction: column; }
+    .list-container {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    .list-container { 
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

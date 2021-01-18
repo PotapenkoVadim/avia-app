@@ -1,0 +1,93 @@
+@family: Helvetica, sans-serif;
+.filter-display {
+  align-self: flex-start;
+  width: 33%;
+  min-height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 3px grey;
+  margin: 0 1.5rem;
+  text-align: center;
+
+  p {
+    color: #444;
+    font-size: 18px;
+    font-family: @family;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: .5rem;
+  }
+  
+  div {
+    display: flex;
+    margin: 0 1rem;
+    &:last-child { margin-bottom: 2.5rem; }
+
+    label{
+      color: #555;
+      font-size: 16px;
+      font-family: @family;
+    }
+
+    .checkbox-custom {
+      opacity: 0;
+      position: absolute;   
+    }
+
+    .checkbox-custom, .checkbox-custom-label {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .checkbox-custom-label { position: relative; }
+    .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+      content: '';
+      background: #fff;
+      border: 2px solid #aaa;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      margin-right: 10px;
+      text-align: center;
+    }
+
+    .checkbox-custom:focus + .checkbox-custom-label { outline: none;}
+    .checkbox-custom:checked + .checkbox-custom-label:before {
+      content: "\f00c";
+      font-family: 'FontAwesome';
+      color: #0099FF;
+      border: 2px solid #0099FF;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-display {
+    width: 85%;
+    margin: 0 auto 1rem;
+    div {
+      width: 50%;
+      margin: 0 auto;
+      &:last-child { margin-bottom: 1rem; }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-display {
+    width: 100%;
+    div {
+      width: 100%;
+      label { font-size: 14px; }
+      .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

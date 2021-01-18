@@ -1,0 +1,1 @@
+export const HOST = 'https://front-test.beta.aviasales.ru/';
